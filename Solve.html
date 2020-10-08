@@ -26,12 +26,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/Index.html">
                             Home
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/Solve.html">Solve</a>
                     </li>
                     <li class="nav-item">
@@ -42,9 +42,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
                     </li>
                 </ul>
             </div>
@@ -64,11 +61,88 @@
             </div>
         </div>
     </div>
+    <hr />
+
+    
+    
+    <div class="row">
+        <div class="col">
+            <input class="lettersOnly" type="text" id="txtTacoIn1" />
+        </div>
+        <div class="col">
+            <input class="lettersOnly" type="text" id="txtTacoIn2" />
+        </div>
+        <div class="col">
+            <input class="lettersOnly" type="text" id="txtTacoIn3" />
+        </div>
+        <div class="col">
+            <button id="btnTaco" class="btn btn-dark">Click Me</button>
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <script>
+        document.getElementById("btnTaco").addEventListener("click",function() {
+
+            let originalWord = document.getElementById("txtTacoIn").value;
+
+            let modifiedWord = originalWord.toLowerCase();
+
+        modifiedWord = modifiedWord.replace("", "");
+
+        let reversedWord = ReverseAString(modifiedWord);
+
+            if (modifiedWord == reverseWord) {
+                document.getElementById("spnTacoOut").innerHTML = "";
+            }
+
+            else {
+                document.getElementById("spnTacoOut").innerHTML = "";
+            }
+        }
+            
+            document.getElementsByClassName("lettersOnly").addEventListener("keydown", function (e) {
+
+
+
+
+            var character = (e.which) ? e.which : e.keyCode;
+            consol.log(character)
+            if (character >= 97 && character <= 122 ||
+                character >= 65 && character <= 90|| character ==8) {
+                return true;
+            }
+            else {
+                e.preventDefault();
+
+                return false;
+            }
+
+        });
+
+        document.getElementsByClassName("lettersOnly").addEventListener("keydown", )
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
